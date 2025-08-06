@@ -1,0 +1,116 @@
+body {
+    background: #f7f7f7;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #222;
+    color: #fff;
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+.navbar {
+    background-color: lightslategray;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 8px 5px 8px 5px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-brand {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.navbar-item {
+    font-variant: small-caps;
+    margin-left: 30px;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 2em;
+}
+.navbar p {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+.orange {
+    color: #ff9800;
+    margin-top: 0;
+}
+.projects {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-card {
+    background: #fafafa;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    padding: 15px;
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+.contact-form button {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background: #e68900;
+}
+
+.alert.success {
+    background: #dff0d8;
+    color: #3c763d;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d6e9c6;
+}
+
+

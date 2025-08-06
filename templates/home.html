@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, msg in messages %}
+          <div class="alert {{ category }}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <section class="card">
+        <h2 class="orange">Welcome to My Portfolio </h2>
+        <p>Hello! I'm John Mahicel, a passionate web designer and developer. I create beautiful, responsive websites and web applications. Explore my work and feel free to get in touch!</p>
+    </section>
+    <section class="card">
+        <h2 class="orange">About Me</h2>
+        <p>I am a creative professional with a love for building user-friendly digital experiences. With a background in both design and development, I bridge the gap between aesthetics and functionality. I enjoy learning new technologies and continuously improving my skills.</p>
+    </section>
+    <section class="card">
+        <h2 class="orange">Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio to showcase my skills and projects. Built with HTML, CSS.</p>
+            </div>
+            <div class="project-card">
+                <h3>Restaurant Landing Page</h3>
+                <p>A modern, responsive landing page for a local restaurant. Features menu highlights and contact info.</p>
+            </div>
+            <div class="project-card">
+                <h3>Blog Platform</h3>
+                <p>A simple blog platform with user authentication and post management. Built using modern web technologies.</p>
+            </div>
+        </div>
+    </section>
+    <section class="card">
+        <h2 class="orange">Contact</h2>
+        <form class="contact-form" method="POST" action="{{ url_for('contact') }}">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</div>
+{% endblock %}

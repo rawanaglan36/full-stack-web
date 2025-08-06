@@ -1,0 +1,36 @@
+services:
+  web:
+    container_name: flask_app
+    # image: rawan36/flask-app
+    build: .
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    environment:
+      - FLASK_APP=app.py
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+  
+
+  nginx:
+      image: nginx
+      volumes:
+      - ./templates:/etc/nginx/templates
+      ports:
+      - "8080:80"
+      environment:
+      - NGINX_HOST=foobar.com
+      - NGINX_PORT=80
+      depends_on:
+        - web
+
+volumes:
+  mongo_data:

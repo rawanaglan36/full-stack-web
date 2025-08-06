@@ -1,0 +1,7 @@
+services:
+  web:
+    build:
+      context: .
+      target: test
+    volumes:
+      - /flask-template:/app 
