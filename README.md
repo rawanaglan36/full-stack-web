@@ -1,23 +1,33 @@
-# Flask Template
+##Fullstack Web App with Nginx, Python, and MongoDB
+<img width="870" height="743" alt="Screenshot 2025-08-09 144230" src="https://github.com/user-attachments/assets/eaca4ee9-dfd7-49aa-8b86-866b02311d26" />
+<img width="800" height="555" alt="Screenshot 2025-08-09 144247" src="https://github.com/user-attachments/assets/f0c03054-ae8a-4b88-8c37-1dc3c6397647" />
 
-This sample repo contains the recommended structure for a Python Flask project. In this sample, we use `flask` to build a web application and the `pytest` to run tests.
+#Overview
+This is a fullstack web application with:
+Frontend (HTML, CSS, JS)
+Backend built with Python
+MongoDB as the database
+Nginx as a reverse proxy
 
- For a more in-depth tutorial, see our [Flask tutorial](https://code.visualstudio.com/docs/python/tutorial-flask).
+The project supports three environments:
+Development
+Testing
+Production
+It is fully containerized with Docker and uses GitHub Actions CI/CD to:
+Build containers automatically on every push
 
- The code in this repo aims to follow Python style guidelines as outlined in [PEP 8](https://peps.python.org/pep-0008/).
+#Features
+Frontend + Backend + Database in one setup
+Nginx reverse proxy configuration
+Environment-based configuration (dev, test, prod)
+MongoDB integration
+Docker Compose for multi-container orchestration
+CI/CD pipeline for automatic builds and deployment
+Testing environment with pytest
 
-## Running the Sample
+#CI/CD Pipeline
+This project has a GitHub Actions workflow that:
+Builds Docker images on every push to the repository
+Pushes the image to Docker Hub
+Supports multi-environment deployments
 
-To successfully run this example, we recommend the following VS Code extensions:
-
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
-- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) 
-
-- Open the template folder in VS Code (**File** > **Open Folder...**)
-- Create a Python virtual environment using the **Python: Create Environment** command found in the Command Palette (**View > Command Palette**). Ensure you install dependencies found in the `pyproject.toml` file
-- Ensure your newly created environment is selected using the **Python: Select Interpreter** command found in the Command Palette
-- Run the app using the Run and Debug view or by pressing `F5`
-- To test your app, ensure you have the dependencies from `dev-requirements.txt` installed in your environment
-- Navigate to the Test Panel to configure your Python test or by triggering the **Python: Configure Tests** command from the Command Palette
-- Run tests in the Test Panel or by clicking the Play Button next to the individual tests in the `test_app.py` file
